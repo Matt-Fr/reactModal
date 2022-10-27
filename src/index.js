@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Modal from "./lib/Modal";
+
+const App = () => {
+  const [openModal, setOpenModal] = useState(false);
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setOpenModal(!openModal);
+        }}
+      >
+        Open the modal!!
+      </button>
+      <Modal
+        message="Employee Created"
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+      ></Modal>
+    </div>
+  );
+};
+
+export default App;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
