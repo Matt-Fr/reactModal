@@ -15,9 +15,21 @@
   transform: translate(-50%, -50%);
   width: 25rem;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .background-Container-title {
   padding: 1rem;
   display: flex;
+}
+
+.closeIcon {
+  position: absolute;
+  top: -1.2rem;
+  right: 1.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
 }

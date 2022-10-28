@@ -1,5 +1,6 @@
 import React from "react";
 import "./Modal.css";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const Modal = ({ message, openModal, setOpenModal }) => {
   return (
@@ -17,6 +18,7 @@ const Modal = ({ message, openModal, setOpenModal }) => {
           }}
         >
           <h3 className="background-Container-title">{message}</h3>
+          <AiFillCloseCircle className="closeIcon" />
         </div>
       </div>
     )
